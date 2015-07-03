@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "camera:Body" "camera:Money" "camera:Large-Format" "camera:Camera" "camera:Window" "camera:Lens" "camera:Digital" "camera:Range" "camera:PurchaseableItem" ; /*classes style*/
+	"camera:Body" -> "camera:PurchaseableItem" [ label = "rdfs:subClassOf" ];
+	"camera:Lens" -> "camera:PurchaseableItem" [ label = "rdfs:subClassOf" ];
+	"camera:Money" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"camera:Camera" -> "camera:PurchaseableItem" [ label = "rdfs:subClassOf" ];
+	"camera:Range" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"camera:PurchaseableItem" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"camera:Large-Format" -> "camera:Camera" [ label = "rdfs:subClassOf" ];
+	"camera:Digital" -> "camera:Camera" [ label = "rdfs:subClassOf" ];
+	"camera:Window" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+
+}
