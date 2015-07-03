@@ -1,0 +1,2285 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://swrc.ontoware.org/ontology-07"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://swrc.ontoware.org/ontology-07">
+    <Prefix name="" IRI="http://swrc.ontoware.org/ontology-07#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrc" IRI="http://swrc.ontoware.org/ontology#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;string">0.7.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">Updated version of the swrc ontology (v0.7.1) based on the original swrc ontology. Responsible ontology engineer: Philipp Zaltenbach. Date: 22.06.2007. Contributions made by: Olivier Dameron.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:AdministrativeStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Article"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:AssistantProfessor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:AssociateProfessor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Association"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Book"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Booklet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Collection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Conference"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Department"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:DevelopmentProject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:DiplomaThesis"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Document"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Employee"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ExchangeProfessor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:FullProfessor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Graduate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:GraduateClass"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:HonoraryProfessor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:InBook"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:InCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:InProceedings"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Institute"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Journal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Lecturer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Magazine"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Manager"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Manual"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:MasterThesis"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Misc"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:PhDStudent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:PhDThesis"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Proceedings"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Product"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ProfessorEmeritus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ProjectMeeting"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ProjectReport"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Report"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ResearchPaper"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ResearchProject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:ResearchTopic"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:SoftwareComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:SoftwareProject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Student"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:TechnicalReport"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:TechnicalStaff"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Thesis"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Topic"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Undergraduate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:UndergraduateAdvancedClass"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:UndergraduateIntermediateClass"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:University"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Unpublished"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:UnrefereedArticle"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:VisitingProfessor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:carriedOutBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:dealtWithIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:describesProject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:financedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:finances"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:isAbout"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:member"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:projectInfo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:publication"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="swrc:worksAtProject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:coverage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:format"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:identifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:relation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:rights"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:subject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:abstract"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:chapter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:creationDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:edition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:endDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:eventTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:fax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:firstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:homepage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:howpublished"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:isbn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:journal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:keywords"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:lastName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:month"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:note"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:pages"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:phone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:photo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:price"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:series"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:startDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:volume"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="swrc:year"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <Class abbreviatedIRI="swrc:Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:publication"/>
+            <Class abbreviatedIRI="swrc:Publication"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:worksAtProject"/>
+            <Class abbreviatedIRI="swrc:Project"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AdministrativeStaff"/>
+        <Class abbreviatedIRI="swrc:Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Article"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AssistantProfessor"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:AssociateProfessor"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Association"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Book"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Booklet"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Collection"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Conference"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Department"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:DevelopmentProject"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:DiplomaThesis"/>
+        <Class abbreviatedIRI="swrc:Thesis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="dc:creator"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="swrc:Organization"/>
+                <Class abbreviatedIRI="swrc:Person"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:coverage"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:date"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:format"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:identifier"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:language"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:relation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:rights"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:source"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:subject"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:title"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Document"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="dc:type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Employee"/>
+        <Class abbreviatedIRI="swrc:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ExchangeProfessor"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:FullProfessor"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Graduate"/>
+        <Class abbreviatedIRI="swrc:Student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:GraduateClass"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:HonoraryProfessor"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:InBook"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:InCollection"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:InProceedings"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Institute"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Journal"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Lecturer"/>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Magazine"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Manager"/>
+        <Class abbreviatedIRI="swrc:Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Manual"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:MasterThesis"/>
+        <Class abbreviatedIRI="swrc:Thesis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Misc"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Organization"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Organization"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+            <Class abbreviatedIRI="swrc:Organization"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Organization"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:finances"/>
+            <Class abbreviatedIRI="swrc:Project"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:address"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:email"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:fax"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:firstName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:homepage"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:lastName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:phone"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:PhDStudent"/>
+        <Class abbreviatedIRI="swrc:Graduate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:PhDStudent"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:publication"/>
+            <Class abbreviatedIRI="swrc:Publication"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:PhDStudent"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:worksAtProject"/>
+            <Class abbreviatedIRI="swrc:Project"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:PhDThesis"/>
+        <Class abbreviatedIRI="swrc:Thesis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Proceedings"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Product"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Product"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:creationDate"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Product"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:price"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ProfessorEmeritus"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:carriedOutBy"/>
+            <Class abbreviatedIRI="swrc:Organization"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:financedBy"/>
+            <Class abbreviatedIRI="swrc:Organization"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:isAbout"/>
+            <Class abbreviatedIRI="swrc:Topic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:member"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:projectInfo"/>
+            <Class abbreviatedIRI="swrc:Publication"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:endDate"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:homepage"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:startDate"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Project"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="swrc:status"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ProjectMeeting"/>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ProjectReport"/>
+        <Class abbreviatedIRI="swrc:Report"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ProjectReport"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:describesProject"/>
+            <Class abbreviatedIRI="swrc:Project"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Publication"/>
+        <Class abbreviatedIRI="swrc:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Report"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:member"/>
+            <Class abbreviatedIRI="swrc:Employee"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ResearchPaper"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ResearchProject"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ResearchTopic"/>
+        <Class abbreviatedIRI="swrc:Topic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:ResearchTopic"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="swrc:dealtWithIn"/>
+            <Class abbreviatedIRI="swrc:Project"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:SoftwareComponent"/>
+        <Class abbreviatedIRI="swrc:Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:SoftwareProject"/>
+        <Class abbreviatedIRI="swrc:DevelopmentProject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Student"/>
+        <Class abbreviatedIRI="swrc:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:TechnicalReport"/>
+        <Class abbreviatedIRI="swrc:Report"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:TechnicalStaff"/>
+        <Class abbreviatedIRI="swrc:Employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Thesis"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Undergraduate"/>
+        <Class abbreviatedIRI="swrc:Student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:UndergraduateAdvancedClass"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:UndergraduateIntermediateClass"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:University"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Unpublished"/>
+        <Class abbreviatedIRI="swrc:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:UnrefereedArticle"/>
+        <Class abbreviatedIRI="swrc:Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:VisitingProfessor"/>
+        <Class abbreviatedIRI="swrc:FacultyMember"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+        <Class abbreviatedIRI="swrc:Event"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <Class abbreviatedIRI="swrc:AdministrativeStaff"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <Class abbreviatedIRI="swrc:Manager"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:AcademicStaff"/>
+        <Class abbreviatedIRI="swrc:TechnicalStaff"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:AdministrativeStaff"/>
+        <Class abbreviatedIRI="swrc:Manager"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:AdministrativeStaff"/>
+        <Class abbreviatedIRI="swrc:TechnicalStaff"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Association"/>
+        <Class abbreviatedIRI="swrc:Department"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Association"/>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Association"/>
+        <Class abbreviatedIRI="swrc:Institute"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Association"/>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Association"/>
+        <Class abbreviatedIRI="swrc:University"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Conference"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Colloquium"/>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Conference"/>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Conference"/>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Conference"/>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Conference"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Conference"/>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Department"/>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Department"/>
+        <Class abbreviatedIRI="swrc:Institute"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Department"/>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Department"/>
+        <Class abbreviatedIRI="swrc:University"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:DiplomaThesis"/>
+        <Class abbreviatedIRI="swrc:MasterThesis"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:DiplomaThesis"/>
+        <Class abbreviatedIRI="swrc:PhDThesis"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+        <Class abbreviatedIRI="swrc:Institute"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Enterprise"/>
+        <Class abbreviatedIRI="swrc:University"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Exhibition"/>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:GraduateClass"/>
+        <Class abbreviatedIRI="swrc:UndergraduateAdvancedClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:GraduateClass"/>
+        <Class abbreviatedIRI="swrc:UndergraduateIntermediateClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Institute"/>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Institute"/>
+        <Class abbreviatedIRI="swrc:University"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Lecture"/>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Manager"/>
+        <Class abbreviatedIRI="swrc:TechnicalStaff"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:MasterThesis"/>
+        <Class abbreviatedIRI="swrc:PhDThesis"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Meeting"/>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Organization"/>
+        <Class abbreviatedIRI="swrc:Product"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Person"/>
+        <Class abbreviatedIRI="swrc:Product"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:ProjectReport"/>
+        <Class abbreviatedIRI="swrc:TechnicalReport"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Publication"/>
+        <Class abbreviatedIRI="swrc:Unpublished"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:ResearchGroup"/>
+        <Class abbreviatedIRI="swrc:University"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:Seminar"/>
+        <Class abbreviatedIRI="swrc:Workshop"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="swrc:UndergraduateAdvancedClass"/>
+        <Class abbreviatedIRI="swrc:UndergraduateIntermediateClass"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+        <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="swrc:projectInfo"/>
+        <ObjectProperty abbreviatedIRI="swrc:describesProject"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="swrc:finances"/>
+        <ObjectProperty abbreviatedIRI="swrc:financedBy"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:carriedOutBy"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:dealtWithIn"/>
+        <Class abbreviatedIRI="swrc:Topic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:describesProject"/>
+        <Class abbreviatedIRI="swrc:Document"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:financedBy"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:finances"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:isAbout"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Document"/>
+            <Class abbreviatedIRI="swrc:Event"/>
+            <Class abbreviatedIRI="swrc:Product"/>
+            <Class abbreviatedIRI="swrc:Project"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:member"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:projectInfo"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:publication"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="swrc:worksAtProject"/>
+        <Class abbreviatedIRI="swrc:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:carriedOutBy"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:cooperateWith"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:dealtWithIn"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:describesProject"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:financedBy"/>
+        <Class abbreviatedIRI="swrc:Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:finances"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:isAbout"/>
+        <Class abbreviatedIRI="swrc:Topic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:member"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:projectInfo"/>
+        <Class abbreviatedIRI="swrc:Document"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:publication"/>
+        <Class abbreviatedIRI="swrc:Document"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="swrc:worksAtProject"/>
+        <Class abbreviatedIRI="swrc:Project"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:creationDate"/>
+        <DataProperty abbreviatedIRI="swrc:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:endDate"/>
+        <DataProperty abbreviatedIRI="swrc:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:eventTitle"/>
+        <DataProperty abbreviatedIRI="swrc:title"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:firstName"/>
+        <DataProperty abbreviatedIRI="swrc:name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:isbn"/>
+        <DataProperty abbreviatedIRI="dc:identifier"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:lastName"/>
+        <DataProperty abbreviatedIRI="swrc:name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="swrc:startDate"/>
+        <DataProperty abbreviatedIRI="swrc:date"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="swrc:email"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="swrc:phone"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="swrc:Organization"/>
+            <Class abbreviatedIRI="swrc:Person"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:abstract"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:date"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:eventTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:fax"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:firstName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:homepage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:lastName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:note"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="swrc:title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	The extent or scope of the content of the resource.
+Comment: 	Typically, Coverage will include spatial location (a place name or geographic coordinates), temporal period (a period label, date, or date range) or jurisdiction (such as a named administrative entity). Recommended best practice is to select a value from a controlled vocabulary (for example, the Thesaurus of Geographic Names [TGN]) and to use, where appropriate, named places or time periods in preference to numeric identifiers such as sets of coordinates or date ranges.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">abdeckungsspektrum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	An entity primarily responsible for making the content of the resource (for instance an author).
+Comment: 	Examples of Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">urheber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	A date of an event in the lifecycle of the resource.
+
+Comment: 	Typically, Date will be associated with the creation or availability of the resource. Recommended best practice for encoding the date value is defined in a profile of ISO 8601 [W3CDTF] and includes (among others) dates of the form YYYY-MM-DD.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">datum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	An account of the content of the resource.
+Comment: 	Examples of Description include, but is not limited to: an abstract, table of contents, reference to a graphical representation of content or a free-text account of the content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">inhaltlicheBeschreibung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	The physical or digital manifestation of the resource.
+Comment: 	Typically, Format may include the media-type or dimensions of the resource. Format may be used to identify the software, hardware, or other equipment needed to display or operate the resource. Examples of dimensions include size and duration. Recommended best practice is to select a value from a controlled vocabulary (for example, the list of Internet Media Types [MIME] defining computer media formats).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	An unambiguous reference to the resource within a given context.
+Comment: 	Recommended best practice is to identify the resource by means of a string or number conforming to a formal identification system. Formal identification systems include but are not limited to the Uniform Resource Identifier (URI) (including the Uniform Resource Locator (URL)), the Digital Object Identifier (DOI) and the International Standard Book Number (ISBN).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">identifikation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	A language of the intellectual content of the resource.
+Comment: 	Recommended best practice is to use RFC 3066 [RFC3066] which, in conjunction with ISO639 [ISO639]), defines two- and three-letter primary language tags with optional subtags. Examples include &quot;en&quot; or &quot;eng&quot; for English, &quot;akk&quot; for Akkadian&quot;, and &quot;en-GB&quot; for English used in the United Kingdom.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sprache</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	A reference to a related resource.
+Comment: 	Recommended best practice is to identify the referenced resource by means of a string or number conforming to a formal identification system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">beziehung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	Information about rights held in and over the resource.
+Comment: 	Typically, Rights will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses Intellectual Property Rights (IPR), Copyright, and various Property Rights. If the Rights element is absent, no assumptions may be made about any rights held in or over the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">rechtlicheBedingungen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	A Reference to a resource from which the present resource is derived.
+Comment: 	The present resource may be derived from the Source resource in whole or in part. Recommended best practice is to identify the referenced resource by means of a string or number conforming to a formal identification system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">quelle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	A topic of the content of the resource.
+Comment: 	Typically, Subject will be expressed as keywords, key phrases or classification codes that describe a topic of the resource. Recommended best practice is to select a value from a controlled vocabulary or formal classification scheme.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">schlagwoerter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	A name given to the resource.
+Comment: 	Typically, Title will be a name by which the resource is formally known.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">swrc:booktitle removed, since it is redundant to this property here.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">titel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Definition: 	The nature or genre of the content of the resource.
+Comment: 	Type includes terms describing general categories, functions, genres, or aggregation levels for content. Recommended best practice is to select a value from a controlled vocabulary (for example, the DCMI Type Vocabulary [DCT1]). To describe the physical or digital manifestation of the resource, use the FORMAT element.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">typ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:AcademicStaff</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Wissenschaftlicher_Mitarbeiter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:AdministrativeStaff</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Verwaltungsangestellter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Article</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A peer reviewed , refereed article from a journal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Article</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Artikel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:AssistantProfessor</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Privatdozent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:AssociateProfessor</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Ausserordentlicher_Professor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Association</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Verband</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Book</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A complete book, not formed from separate papers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Book</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Buch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Booklet</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A work that is printed and bound but without a named publisher or sponsering institution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Booklet</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Broschuere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Collection</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A book produced from a collection of separate papers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Collection</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Sammelband</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Colloquium</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Kolloquium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Conference</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Konferenz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Department</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Fachbereich</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:DevelopmentProject</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">disjoint with researchProject? maybe not. Olivier 2006-06-07</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:DevelopmentProject</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Entwicklungsvorhaben</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:DiplomaThesis</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Diplomarbeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Document</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Dublin Core elements added. 
+See: http://dublincore.org/documents/dces/
+
+for document types see:
+http://www.bsz-bw.de/diglib/medserv/konvent/metadat/dcresour.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Document</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Dokument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Employee</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Mitarbeiter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Enterprise</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Unternehmen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Event</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Ereignis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ExchangeProfessor</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Austauschprofessor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Exhibition</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Messe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:FacultyMember</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Fakultaetsmitglied</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:FullProfessor</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Ordentlicher_Professor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Graduate</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">disjoint with undergrad? Olivier 2006-06-07
+Philipp: I wouldn&apos;t make it disjoint, since someone can be a bachelor-graduate, but if he is doing his master he is a master-undergraduate at the same time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Graduate</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Absolvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:GraduateClass</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">see: http://www.neurolabor.de/socrate/ects_ganz.htm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:GraduateClass</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Oberseminar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:HonoraryProfessor</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Honorarprofessor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:InBook</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A part of a book, which may be a chapter and/or range of pages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:InBook</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Teil_eines_Buches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:InCollection</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A single paper or article from a published collection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:InCollection</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Teil_eines_Buches_mit_eigenem_Titel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:InProceedings</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A single paper from a published workshop or conference proceedings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:InProceedings</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Artikel_eines_Tagungsbandes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Institute</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Institut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Journal</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">An entire issue of a refereed learned journal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Journal</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Journal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Lecture</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Vortrag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Lecturer</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Lehrbeauftragter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Magazine</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">An entire issue of an unrefereed journal or magazine.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Magazine</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Magazin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Manager</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Manager</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Manual</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">An operations manual for a product.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Manual</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Handbuch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:MasterThesis</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A university Masters thesis.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:MasterThesis</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Master_Thesis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Meeting</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Besprechung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Misc</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Work of another or undetermined type. This is the default scheme value if the scheme is not explicitly stated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Misc</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Sonstiges</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Organization</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Organisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Person</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:PhDStudent</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Doktorand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:PhDThesis</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A university Doctoral thesis.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:PhDThesis</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Doktorarbeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Proceedings</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A whole published workshop or conference proceedings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Proceedings</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Tagungsband</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Product</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Produkt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ProfessorEmeritus</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Emeritierter_Professor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Project</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Projekt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ProjectMeeting</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Projektbesprechung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ProjectReport</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Projekt_Bericht</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Publication</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Publikation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Report</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Bericht</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ResearchGroup</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Forschungsgruppe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:ResearchPaper</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A piece of research work.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ResearchPaper</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Forschungsarbeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ResearchProject</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Forschungsprojekt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:ResearchTopic</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Forschungsthema</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Seminar</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Seminar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:SoftwareComponent</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Softwarekomponente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:SoftwareProject</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Softwareprojekt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Student</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Student</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:TechnicalReport</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">technischer_Bericht</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:TechnicalStaff</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Technischer_Angestellter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Thesis</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Abschlussarbeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Topic</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">If changing this concept (or its subconcepts) consider that the swrc topic ontology depends on the foresaid one.
+The swrc topic ontology can be found at:
+http://ontoware.org/frs/download.php/187/swrc-swtopics.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Topic</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Thema</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Undergraduate</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Student_ohne_Abschluss</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:UndergraduateAdvancedClass</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">see: http://www.neurolabor.de/socrate/ects_ganz.htm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:UndergraduateAdvancedClass</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Hauptseminar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:UndergraduateIntermediateClass</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">see: http://www.neurolabor.de/socrate/ects_ganz.htm
+
+http://dict.leo.org/cgi-bin/dict/urlexp/20030705201638</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:UndergraduateIntermediateClass</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Proseminar </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:University</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Unversität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:Unpublished</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A document with an author and title, but not formally published.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Unpublished</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Ein_nicht_formell_publiziertes_Dokument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:UnrefereedArticle</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">An unrefereed article from a journal, magazine or newspaper.
+
+possible german translation for &quot;unrefereed&quot;, also: unredigiert ?!</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:UnrefereedArticle</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Nicht_begutachteter_Artikel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:VisitingProfessor</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Gastdozent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:Workshop</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Workshop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:abstract</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">zusammenfassung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:address</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">adresse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:carriedOutBy</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">durchgefuehrtVon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:chapter</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kapitel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:cooperateWith</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">zusammenarbeitenMit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:creationDate</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Herstellungsdatum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:date</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">datum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:dealtWithIn</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">behandeltIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:describesProject</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">beschreibtProjekt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:edition</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ausgabe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:email</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:endDate</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">endDatum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:eventTitle</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ereignisTitel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:fax</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">fax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:financedBy</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">finanziertVon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:finances</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">finanziert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:firstName</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">vorname</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:homepage</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">homepage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:howpublished</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">veroeffentlichungsArt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:isAbout</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">check domain. Olivier 2006-06-07
+Philipp: checked.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:isAbout</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ueber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:isbn</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">isbn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:journal</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">journal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:keywords</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">schlagwoerter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:lastName</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">nachname</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:location</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ort</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:member</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">can an organization be a member of another organization? olivier 2006-06-07
+Philipp: Hmm could be possible. Therefore I added Organization to the range that one can state: Organization (has)member Organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:member</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">hatMitglied</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:month</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">monat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:name</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:note</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">bemerkung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:number</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">nummer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:pages</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">seiten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:phone</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">telefon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:photo</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">foto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:price</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">preis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:projectInfo</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">projektInfo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:publication</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">check domain. Olivier 2006-06-07
+Philipp: checked.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>swrc:publication</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">hasPublication (?). Olivier 2006-06-07
+Philipp: Yes, I think it is meant as &quot;hasPublication&quot;. Anytime you have just the verb, it is meant as has + verb in a property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:publication</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">publikation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:series</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">serie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:source</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">quelle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:startDate</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">startDatum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:status</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:title</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">titel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:type</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">typ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:volume</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">volume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:worksAtProject</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">arbeitetAnProjekt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>swrc:year</AbbreviatedIRI>
+        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">jahr</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
