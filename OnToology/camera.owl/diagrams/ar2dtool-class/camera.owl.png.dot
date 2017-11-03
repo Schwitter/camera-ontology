@@ -1,0 +1,40 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "camera:Viewer" "camera:Body" "camera:Money" "camera:SLR" "camera:Camera" "camera:Lens" "camera:Range" "camera:BodyWithNonAdjustableShutterSpeed" "camera:PurchaseableItem" ; /*classes style*/
+	"NULL" -> "7d86d79c:14e5300bf92:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "7d86d79c:14e5300bf92:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "camera:Body" [ label = "rdf:first" ];
+	"NULL" -> "camera:Camera" [ label = "rdf:first" ];
+	"NULL" -> "camera:WindowOnTopOfCamera" [ label = "rdf:first" ];
+	"NULL" -> "camera:shutter-speed" [ label = "owl:onProperty" ];
+	"NULL" -> "camera:viewFinder" [ label = "owl:onProperty" ];
+	"NULL" -> "7d86d79c:14e5300bf92:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "camera:BodyWithNonAdjustableShutterSpeed" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "camera:ThroughTheLens" [ label = "owl:hasValue" ];
+	"NULL" -> "camera:ThroughTheLens" [ label = "rdf:first" ];
+	"NULL" -> "camera:body" [ label = "owl:onProperty" ];
+	"camera:lens" -> "camera:part" [ label = "rdfs:subPropertyOf" ];
+	"camera:Viewer" -> "7d86d79c:14e5300bf92:-7ffc" [ label = "owl:oneOf" ];
+	"camera:body" -> "camera:part" [ label = "rdfs:subPropertyOf" ];
+	"camera:f-stop" -> "camera:aperture" [ label = "owl:equivalentProperty" ];
+	"camera:focal-length" -> "camera:size" [ label = "owl:equivalentProperty" ];
+	"camera:BodyWithNonAdjustableShutterSpeed" -> "7d86d79c:14e5300bf92:-7ffa" [ label = "owl:intersectionOf" ];
+	"camera:SLR" -> "7d86d79c:14e5300bf92:-7ff7" [ label = "owl:intersectionOf" ];
+	"camera:Lens" -> "xsd:string" [ label = "camera:focal-length" ];
+	"camera:Camera" -> "camera:Viewer" [ label = "camera:viewFinder" ];
+	"camera:PurchaseableItem" -> "camera:Money" [ label = "camera:cost" ];
+	"camera:Camera" -> "camera:Lens" [ label = "camera:lens" ];
+	"camera:Lens" -> "camera:Body" [ label = "camera:compatibleWith" ];
+	"camera:Lens" -> "xsd:string" [ label = "camera:size" ];
+	"camera:Lens" -> "xsd:string" [ label = "camera:aperture" ];
+	"camera:Range" -> "xsd:float" [ label = "camera:max" ];
+	"camera:Range" -> "xsd:float" [ label = "camera:min" ];
+	"camera:Range" -> "xsd:string" [ label = "camera:units" ];
+	"camera:Body" -> "camera:Range" [ label = "camera:shutter-speed" ];
+	"camera:Camera" -> "camera:Body" [ label = "camera:body" ];
+	"camera:Lens" -> "xsd:string" [ label = "camera:f-stop" ];
+	"camera:Money" -> "xsd:string" [ label = "camera:currency" ];
+
+}
