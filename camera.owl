@@ -8,7 +8,7 @@
 
     <owl:Ontology rdf:about="">
         <rdfs:comment>
-        Camera OWL Ontology                           
+        Camera OWL Ontology for Demo purposes                           
       Author: Roger L. Costello                                   
         </rdfs:comment>
     </owl:Ontology>
